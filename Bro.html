@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bro! Bratan! Bratishka!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    
+    <label>Введите ваше имя: <input type="text" placeholder="Имя" id="personName"></label><br><br>
+    <button onClick="sayHello()">Поздороваться</button>
+    <span id="helloResult"></span>
+
+    <script>
+        function sayHello() {
+        let name = window.personName.value;
+        let greeting = getGreeting(name);
+        let span = window.helloResult;
+        span.textContent = greeting;
+}
+
+        function getGreeting(name) {
+            let greeting;
+            greeting = `Дорогой мой, самый крутой, Старший Брат на земле! Я поздравляю тебя с Твоим днем рождения!
+            Хочу сказать тебе спасибо за все, что ты делаешь! Я очень рад, что ты стал еще терпеливей!
+            Рад что ты всегда, в любой ситуации остаешься на позитиве!
+            Сорян что я дофига туплю и несу какую то дичь, я стараюсь!
+            Ты для меня всегда остаешься примером, хоть и не прав там парой где то, но всегда я хотел быть как ты!
+            спасибо тебе что ты есть!
+            Здоровья тебя, успехов, меньше багов, больше кода!
+            Я тебя Уважаю, и всегда с тобой и на твоей стороне!
+            Твой  братан Жека!
+            Обнял! Приподнял!`
+            
+            if ( name === "Anton" ){
+                return greeting
+            } else if ( name === "Антон" ){
+                return greeting
+            } else {
+                return `Неверный ввод данных, попробуйте Антон/Anton`
+            }
+        }
+    </script>
+</body>
+</html>
